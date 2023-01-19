@@ -1,0 +1,25 @@
+#header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    background-color: #030303;
+}
+
+#header_links {
+    padding: 0;
+    width: 40vw;
+    display: flex;
+    color: #FFFFFF;
+    list-style: none;
+    justify-content: space-between;
+}
+
+#header_links li {
+    cursor: pointer;
+}
+
+#header_links li:hover {
+    color: #8f8f8f;
+    transition: ease-in 0.125s;
+}
+
