@@ -1,0 +1,8 @@
+#footer-section {
+    width: auto;
+    height: 15vh;
+    background-color: #030303;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
