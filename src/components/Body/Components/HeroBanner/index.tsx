@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeroBanner.styles.css";
 
-import { BannerImage } from "../../assets/images";
+import { BannerImage } from "../../../../assets/images";
 
 const HeroBanner = () => {
   return (
