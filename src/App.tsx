@@ -1,15 +1,12 @@
 import React from "react";
 
-import Layout from "./components/Layout";
-import Body from "./components/Body/Body";
+import Router from "./router";
 
 import "./App.css";
 
 function App() {
   return (
-    <Layout>
-      <Body />
-    </Layout>
+    <Router />
   );
 }
 

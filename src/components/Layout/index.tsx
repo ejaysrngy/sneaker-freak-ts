@@ -3,9 +3,8 @@ import Footer from "../Footer/Footer";
 
 import "./Layout.styles.css";
 
-const Layout = ({ children }: { children: JSX.Element }) => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    // TODO: Add Router
     <div className="layout-container">
       <Header />
       {children}
