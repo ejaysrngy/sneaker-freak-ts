@@ -1,3 +1,4 @@
 #main-section {
-    height: 100vh;
+    /* height: 100vh; */
+    /* removed height to automatically adjust size of body */
 }
