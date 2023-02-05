@@ -10,16 +10,17 @@ type LinkButtonObjectTypes = {
 
 type LinkButtonProps = {
   links: LinkButtonObjectTypes[];
+  noBg?: boolean
 };
 
 const LinkButtons = (props: LinkButtonProps) => {
-  const { links } = props;
+  const { links, noBg } = props;
   return (
     <div id="header_links">
       {links.map((item, index) => {
         return (
           <Link to={item.linkTo} key={index} className="link-items">
-            <span> {item.text} </span>
+            <span style={{color: noBg ? "black" : "white"}}> {item.text} </span>
           </Link>
         );
       })}

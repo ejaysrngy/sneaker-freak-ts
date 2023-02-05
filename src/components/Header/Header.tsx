@@ -1,25 +1,30 @@
 import React from "react";
 import "./Header.styles.css";
+import useHeaderAnimation from "./hooks/useHeaderAnimation";
 
 import LinkButtons from "./Components/LinkButtons/LinkButtons";
 
 const links = [
   {
     text: "Home",
-    linkTo: "/"
+    linkTo: "/",
   },
   {
     text: "Shop",
-    linkTo: "/shop"
-  }
-]
+    linkTo: "/shop",
+  },
+];
 
 const Header = () => {
+  const pagePosition = useHeaderAnimation();
+
+  const pastHeroBanner = pagePosition > 550;
+
   return (
-    <nav id="header">
-      <span style={{color: "white"}}> test </span>
-      <LinkButtons links={links}/>
-      <span style={{color: "white"}}> test </span>
+    <nav id={pastHeroBanner ? "header-wo-bg" : "header-with-bg"}>
+      <span style={{ color: "white" }}> test </span>
+      <LinkButtons links={links} noBg={pastHeroBanner}/>
+      <span style={{ color: "white" }}> test </span>
     </nav>
   );
 };
