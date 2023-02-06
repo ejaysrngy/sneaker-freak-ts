@@ -12,10 +12,34 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: transparent;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
     padding: 1em;
     position: fixed;
     transition: all ease-in 0.25s;
-    color: #030303;
+    color: #FFFFFF;
+}
+
+#header_links {
+    padding: 0;
+    width: auto;
+    display: flex;
+    list-style: none;
+    gap: 20vw;
+}
+
+.link-items {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.link-items span {
+    cursor: pointer;
+}
+
+.link-items span:hover {
+    color: #8f8f8f;
+    transition: ease-in 0.125s;
 }
 
