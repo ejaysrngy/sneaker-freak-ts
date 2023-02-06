@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.styles.css";
 import useHeaderAnimation from "./hooks/useHeaderAnimation";
 
-import LinkButtons from "./Components/LinkButtons/LinkButtons";
+import { Link } from "react-router-dom";
 
 const links = [
   {
@@ -23,7 +23,18 @@ const Header = () => {
   return (
     <nav id={pastHeroBanner ? "header-wo-bg" : "header-with-bg"}>
       <span style={{ color: "white" }}> test </span>
-      <LinkButtons links={links} noBg={pastHeroBanner}/>
+      <div id="header_links">
+        {links.map((item, index) => {
+          return (
+            <Link to={item.linkTo} key={index} className="link-items">
+              <span style={{ color: pastHeroBanner ? "black" : "white" }}>
+                {" "}
+                {item.text}{" "}
+              </span>
+            </Link>
+          );
+        })}
+      </div>
       <span style={{ color: "white" }}> test </span>
     </nav>
   );
