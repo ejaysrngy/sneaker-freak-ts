@@ -21,13 +21,13 @@ const Header = () => {
   const pastHeroBanner = pagePosition > 550;
 
   return (
-    <nav id={pastHeroBanner ? "header-wo-bg" : "header-with-bg"}>
+    <nav id={pastHeroBanner ? "header-with-bg" : "header-wo-bg"}>
       <span style={{ color: "white" }}> test </span>
       <div id="header_links">
         {links.map((item, index) => {
           return (
             <Link to={item.linkTo} key={index} className="link-items">
-              <span style={{ color: pastHeroBanner ? "black" : "white" }}>
+              <span style={{ color: pastHeroBanner ? "white" : "black" }}>
                 {" "}
                 {item.text}{" "}
               </span>
