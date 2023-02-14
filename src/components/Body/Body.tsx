@@ -1,7 +1,7 @@
 import React from "react";
 import "./Body.styles.css";
 
-import { Catchphrase, HeroBanner } from "./Components";
+import { Catchphrase, FeaturedProducts, HeroBanner } from "./Components";
 
 const Body = () => {
   return (
@@ -11,6 +11,7 @@ const Body = () => {
         */}
       <HeroBanner />
       <Catchphrase />
+      <FeaturedProducts />
     </main>
   );
 };
