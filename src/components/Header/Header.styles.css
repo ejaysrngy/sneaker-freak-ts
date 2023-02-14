@@ -1,24 +1,45 @@
-#header {
-    width: 100vw;
+#header-with-bg {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     background-color: #030303;
+    padding: 1em;
+    position: fixed;
+    transition: all ease-in 0.25s;
+
+}
+
+#header-wo-bg {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(180deg, rgb(80, 80, 80) 0%, rgba(255,255,255,0) 100%);
+    padding: 1em;
+    position: fixed;
+    transition: all ease-in 0.25s;
+    color: #FFFFFF;
 }
 
 #header_links {
     padding: 0;
-    width: 40vw;
+    width: auto;
     display: flex;
-    color: #FFFFFF;
     list-style: none;
-    justify-content: space-between;
+    gap: 20vw;
 }
 
-#header_links li {
+.link-items {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.link-items span {
     cursor: pointer;
 }
 
-#header_links li:hover {
+.link-items span:hover {
     color: #8f8f8f;
     transition: ease-in 0.125s;
 }

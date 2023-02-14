@@ -1,15 +1,27 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-import { HomePage } from "pages";
+const HomePage = React.lazy(() => import("../pages/Home"));
+
+const LoadComponent = ({
+  component: Component,
+}: {
+  component: React.LazyExoticComponent<() => JSX.Element>;
+}) => {
+  return (
+    <Suspense fallback={<span> Loading... </span>}>
+      <Component />
+    </Suspense>
+  );
+};
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />, //home
+    element: <LoadComponent component={HomePage} />, //home
   },
   {
     path: "/shop",
-    element: <div></div>, //shop
+    element: <div> Test </div>, //shop
   },
 ]);
