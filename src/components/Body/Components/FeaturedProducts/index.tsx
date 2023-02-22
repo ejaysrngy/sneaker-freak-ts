@@ -1,15 +1,28 @@
 import React from "react";
+import "./FeaturedProducts.styles.css";
+import "swiper/css";
 
 import { shoesDB } from "utils/enums";
-
 import { ProductCard } from "components/Products";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const FeaturedProducts = () => {
   return (
-    <div style={{ display: "flex", gap: "1em 1.5em", flexWrap: "wrap", padding: "0 0.5em" }}>
-      {shoesDB.map((product, index) => {
-        return <ProductCard key={index} product={product} />;
-      })}
+    <div id="featured-products-container">
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={3}
+        onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
+        {shoesDB.map((product, index) => {
+          return (
+            <SwiperSlide>
+              <ProductCard key={index} product={product} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   );
 };
