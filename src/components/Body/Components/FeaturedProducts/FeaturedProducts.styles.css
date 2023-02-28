@@ -4,3 +4,8 @@
     flex-wrap: wrap;
     padding: 3em 2em;
 }
+
+.featured-products-title span {
+    font-size: 2em;
+    font-weight: 700;
+}

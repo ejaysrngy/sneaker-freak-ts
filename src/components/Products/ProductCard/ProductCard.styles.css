@@ -19,6 +19,7 @@
 .img-container img {
     height: auto;
     width: 100%;
+    user-select: none;
 }
 
 .product-name-container {
@@ -38,7 +39,7 @@
 .product-name-container span:after {
     content: '';
     position: absolute;
-    width: 11vw;
+    width: 10.5vw;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;

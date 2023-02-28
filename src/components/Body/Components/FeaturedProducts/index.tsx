@@ -9,6 +9,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const FeaturedProducts = () => {
   return (
     <div id="featured-products-container">
+      <div className="featured-products-title">
+        <span>
+          Featured Products
+        </span>
+      </div>
       <Swiper
         spaceBetween={50}
         slidesPerView={3}
