@@ -9,9 +9,9 @@ interface ProductType {
   shoe_name: string;
 }
 
-const useGetProductDetails = (productId: Number): ProductType | null => {
+const useGetProductDetails = (productId: Number | string): ProductType | undefined => {
   const productDetails = useMemo(() => {
-    const filteredItem = shoesDB.filter((item, index): any => {
+    const filteredItem = shoesDB.filter((item): any => {
       return item.product_id === productId
     });
 
@@ -20,8 +20,7 @@ const useGetProductDetails = (productId: Number): ProductType | null => {
   }, [productId]);
 
   if (productDetails) return productDetails
-  else return null
-
+  else return
 };
 
 export default useGetProductDetails;

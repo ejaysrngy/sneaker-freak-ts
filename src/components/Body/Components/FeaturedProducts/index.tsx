@@ -15,7 +15,7 @@ const FeaturedProducts = () => {
         </span>
       </div>
       <Swiper
-        spaceBetween={50}
+        spaceBetween={20}
         slidesPerView={3}
       >
         {shoesDB.map((product, index) => {
