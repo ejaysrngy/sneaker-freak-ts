@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
-import { HomePage } from "pages/index";
+import { HomePage, ProductPage } from "pages/index";
 
 const LoadComponent = ({
   component: Component,
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
     element: <div> Test </div>, //shop
   },
   {
-    path: "/:productId",
-    element: <div> Test 1 </div>
+    path: "/products/:productId",
+    element: <LoadComponent component={ProductPage} />
   }
 ]);

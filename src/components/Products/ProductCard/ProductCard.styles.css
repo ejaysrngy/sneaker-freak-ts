@@ -1,5 +1,6 @@
 .featured-product-container {
-    height: auto;
+    height: 27.5rem;
+    width: auto;
     display: flex;
     flex-direction: column;
     padding: 1em;
@@ -9,9 +10,10 @@
 }
 
 .img-container {
-    height: 17em;
+    height: 80%;
     width: auto;
     display: flex;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
 }
@@ -39,7 +41,7 @@
 .product-name-container span:after {
     content: '';
     position: absolute;
-    width: 10.5vw;
+    width: 6.5rem;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
