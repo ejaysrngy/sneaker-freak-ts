@@ -8,12 +8,13 @@ const HeroBanner = () => {
     <div
       id="hero-banner-container"
       style={{
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
         backgroundImage: `url(${BannerImage})`,
       }}
-    />
+    >
+      <div className="hero-banner-text">
+        Get freaky with your sneaks
+      </div>
+    </div>
   );
 };
 

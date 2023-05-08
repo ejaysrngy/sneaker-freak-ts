@@ -1,7 +1,6 @@
 import React, { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
-
-const HomePage = React.lazy(() => import("../pages/Home"));
+import { HomePage, ProductPage } from "pages/index";
 
 const LoadComponent = ({
   component: Component,
@@ -24,4 +23,8 @@ export const router = createBrowserRouter([
     path: "/shop",
     element: <div> Test </div>, //shop
   },
+  {
+    path: "/products/:productId",
+    element: <LoadComponent component={ProductPage} />
+  }
 ]);
